@@ -1,0 +1,33 @@
+name:                nvidia-fanctrl
+version:             0.1.0.0
+github:              "rintse/nvidia-fanctrl"
+license:             BSD3
+author:              "Rintse"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+description:         
+  Please see the README on GitHub at 
+  <https://github.com/rintse/nvidia-fanctrl#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- process
+- monad-loops
+
+library:
+  source-dirs: src
+
+executables:
+  nvidia-fanctrl-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - nvidia-fanctrl

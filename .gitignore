@@ -1,0 +1,5 @@
+.stack-work/
+hie.yaml
+nvidia-fanctrl.cabal
+stack.yaml.lock
+
