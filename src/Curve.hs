@@ -19,6 +19,7 @@ points :: [CurvePoint]
 points =
     [ CurvePoint 0 0,
       CurvePoint 60 0,
+      CurvePoint 61 0,
       CurvePoint 70 25,
       CurvePoint 80 50,
       CurvePoint 90 100

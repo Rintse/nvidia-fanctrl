@@ -16,13 +16,14 @@ monitor = do
     case temp of
         Just t -> do
             putStrLn $ "Temperature: " ++ show t
+            
             let s = lookupFanSpeed t
             putStrLn $ "Desired fan speed: " ++ show s
-            setTemp s
+            setSpeed s
 
         Nothing -> error "Could not read GPU temperature"
     
-    threadDelay 1000000
+    threadDelay 2000000
 
 
 main :: IO ()

@@ -14,8 +14,8 @@ getTemp :: IO (Maybe Int)
 getTemp = readTemp >>= toInt where
     toInt = return . readMaybe :: String -> IO (Maybe Int)
 
-setTemp :: Int -> IO ()
-setTemp t = do
+setSpeed :: Int -> IO ()
+setSpeed t = do
     (exitCode, _, _) <- readProcessWithExitCode
         "nvidia-settings"
         ["-a", "GPUTargetFanSpeed=" ++ show t] ""
